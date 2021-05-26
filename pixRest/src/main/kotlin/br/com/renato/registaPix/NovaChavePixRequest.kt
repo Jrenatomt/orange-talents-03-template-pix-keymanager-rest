@@ -6,7 +6,7 @@ import br.com.pix.TipoChave
 import br.com.pix.TipoConta
 import br.com.renato.compartilhado.validacoes.ChavePixValida
 import io.micronaut.core.annotation.Introspected
-import io.micronaut.validation.validator.constraints.EmailValidator
+import org.hibernate.validator.internal.constraintvalidators.hv.EmailValidator
 import org.hibernate.validator.internal.constraintvalidators.hv.br.CPFValidator
 import java.util.*
 import javax.validation.constraints.NotNull
