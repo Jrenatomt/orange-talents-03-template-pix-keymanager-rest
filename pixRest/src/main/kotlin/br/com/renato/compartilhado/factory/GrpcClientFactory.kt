@@ -1,6 +1,7 @@
 package br.com.renato.compartilhado.factory
 
 
+import br.com.pix.KeyManagerRemoveServiceGrpc
 import br.com.pix.KeyManagerServiceGrpc
 import io.grpc.ManagedChannel
 import io.micronaut.context.annotation.Factory
@@ -12,5 +13,8 @@ open class GrpcClientFactory(@GrpcChannel("keyManager") val channel: ManagedChan
 
     @Singleton
     fun registraChaveClientStub() = KeyManagerServiceGrpc.newBlockingStub(channel)
+
+    @Singleton
+    fun deletaChaveClientStub() = KeyManagerRemoveServiceGrpc.newBlockingStub(channel)
 
 }
