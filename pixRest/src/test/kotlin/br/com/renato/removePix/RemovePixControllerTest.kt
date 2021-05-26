@@ -34,7 +34,7 @@ internal class RemovePixControllerTest {
     lateinit var client: HttpClient
 
     @Test
-    fun `deve registrar chave quando dados validos`() {
+    fun `deve remover chave quando dados validos`() {
         val idPix = UUID.randomUUID()
         val idCliente = UUID.randomUUID()
         val remocaoChaveRequest = remocaoChaveRequest(idPix.toString(), idCliente.toString())
