@@ -2,6 +2,7 @@ package br.com.renato.compartilhado.factory
 
 
 import br.com.pix.KeyManagerConsultaServiceGrpc
+import br.com.pix.KeyManagerListaServiceGrpc
 import br.com.pix.KeyManagerRemoveServiceGrpc
 import br.com.pix.KeyManagerServiceGrpc
 import io.grpc.ManagedChannel
@@ -20,5 +21,8 @@ open class GrpcClientFactory(@GrpcChannel("keyManager") val channel: ManagedChan
 
     @Singleton
     fun detalheChaveClientStub() = KeyManagerConsultaServiceGrpc.newBlockingStub(channel)
+
+    @Singleton
+    fun listChavesClientStub() = KeyManagerListaServiceGrpc.newBlockingStub(channel)
 
 }
